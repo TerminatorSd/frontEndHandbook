@@ -3,3 +3,15 @@
 
 ## 读过的书
 [《代码整洁之道》](./books/代码整洁之道.md)
+[《Web性能实战》](./books/Web性能实战.md)
+[《高性能JavaScript》](./books/高性能JavaScript.md)
+[《构建高性能Web站点》](./books/构建高性能Web站点.md)
+[《JavaScript语言精粹》](./books/JavaScript语言精粹.md)
+
+## 写点东西
+[我在工作中学到的东西](./books/我在工作中学到的东西.md)
+[如果我是一个面试官](./books/如果我是一个面试官.md)
+[前后端鉴权二三事](./books/前后端鉴权二三事.md)
+[要成为一名技术管理](./books/要成为一名技术管理.md)
+[程序员的自我修养](./books/程序员的自我修养.md)
+[Why does js have this](./books/Why-does-js-have-this.md)

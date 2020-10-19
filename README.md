@@ -16,3 +16,10 @@
 - [要成为一名技术管理](./books/要成为一名技术管理.md) <br>
 - [程序员的自我修养](./books/程序员的自我修养.md) <br>
 - [Why does js have this](./books/Why-does-js-have-this.md) <br>
+- [穿针引线聊前端入门](./books/穿针引线聊前端入门.md) <br>
+- [开发者测试](./books/开发者测试.md) <br>
+- [前端监控](./books/前端监控.md) <br>
+- [软件开发中的若干驱动](./books/软件开发中的若干驱动.md) <br>
+- [学习go语言](./books/学习go语言.md) <br>
+- [git all in one](./books/git-all-in-one.md) <br>
+- [工作半年有感](./books/half-year-of-job.md) <br>

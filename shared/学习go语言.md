@@ -29,4 +29,9 @@ v_name := value
 ### 书写习惯
 - if-else 后的内容不需要带小括号
 
+### 需要注意
+- 目录结构不同，$GOPATH/src/project
+- 有大量的错误处理逻辑
+- 方法是集中在某一个包里，比如strings
+
 todo：第十章，处理错误

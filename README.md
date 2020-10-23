@@ -12,7 +12,6 @@
 - [《JavaScript语言精粹》](./books/JavaScript语言精粹.md) <br>
 - [《园丁与木匠》](./books/园丁与木匠.md) <br>
 - [《修改软件的艺术》](./books/修改软件的艺术.md) <br>
-- [《go语言经典入门》](./books/go语言经典入门.md) <br>
 
 ### 写点东西
 - [我在工作中学到的东西](./shared/我在工作中学到的东西.md) <br>

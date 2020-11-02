@@ -66,6 +66,10 @@ shift + i 编辑
 按v进入visual状态，选择多行，用>或<缩进或缩出
 ```
 
+### ex命令
+ex 可用的命令非常多，可以产生非常amazing 的效果
+- 切换colorscheme `:color<C-d> <Tab>`
+
 ### 具体场景
 - git rebase 时经常要删除最开头的pick，改成s `cws`
 ```

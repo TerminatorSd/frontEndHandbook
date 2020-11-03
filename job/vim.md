@@ -17,8 +17,11 @@ gU   // growUp 大写
 gUap // growUp a paragraph 
 ```
 
-### 位置移动
+### 动作命令
+- 想成为盲打人员，要学的第一件事情就是让手指始终停留在本位行上；要想按到光标键，你非得把手从本位行上移开才行。
+- 查看帮助 `:h motion.txt`
 - 左下右上 `h j k l`
+- 基于单词移动 `w b e ge`
 - 行内快速移动 `t & f
     - 把光标移到同一行的下一个c字符处 `fc`
     - 把光标移到同一行的上一个c字符处 `Fc`
@@ -69,6 +72,7 @@ shift + i 编辑
 ### ex命令
 ex 可用的命令非常多，可以产生非常amazing 的效果
 - 切换colorscheme `:color<C-d> <Tab>`
+- ex 命令可以使用跟shell 命令类似的语法，比如 `:pwd` `:ls` `:find`
 
 ### 具体场景
 - git rebase 时经常要删除最开头的pick，改成s `cws`

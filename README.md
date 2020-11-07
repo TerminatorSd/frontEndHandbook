@@ -42,7 +42,7 @@
 - [html](./job/html.md) <br>
 - [js](./job/js.md) <br>
 - [network](./job/network.md) <br>
-- [vim](./job/vim.md) <br>
+- [vim从一到二](./job/vim.md) <br>
 - [others](./job/others.md) <br>
 - [webpack](./job/webpack.md) <br>
 - [从零到一卡夫卡](./job/从零到一卡夫卡.md) <br>

@@ -24,7 +24,7 @@ var bar = {
         console.log(myName);
     }
 }
-var name = 'name in global';
+var myName = 'name in global';
 bar.printName(); // name in global
 ```
 
@@ -43,7 +43,7 @@ var bar = {
         console.log(this.myName);
     }
 }
-var name = 'name in global';
+var myName = 'name in global';
 bar.printName(); // name in bar
 // 作用域和this
 var bar = {

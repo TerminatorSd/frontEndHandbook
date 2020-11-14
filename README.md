@@ -15,13 +15,13 @@
 
 ### 写点东西
 - [SRE必知必会](./shared/SRE必知必会.md) <br>
-- [我在工作中学到的东西](./shared/我在工作中学到的东西.md) <br>
-- [如果我是一个面试官](./shared/如果我是一个面试官.md) <br>
+- 工作以后，慢慢地，我们会明白很多事情：[我在工作中学到的东西](./shared/我在工作中学到的东西.md) <br>
+- 怎么样能给候选人一次良好的面试体验，哪怕我没有给他通过：[如果我是一个面试官](./shared/如果我是一个面试官.md) <br>
 - [前后端鉴权二三事](./shared/前后端鉴权二三事.md) <br>
 - [要成为一名技术管理](./shared/要成为一名技术管理.md) <br>
 - [程序员的自我修养](./shared/程序员的自我修养.md) <br>
 - [Why does js have this](./shared/Why-does-js-have-this.md) <br>
-- [穿针引线聊前端入门](./shared/穿针引线聊前端入门.md) <br>
+- 入门前端的路上一定想要问这些问题：[穿针引线聊前端入门](./shared/穿针引线聊前端入门.md) <br>
 - [开发者测试](./shared/开发者测试.md) <br>
 - [前端监控](./shared/前端监控.md) <br>
 - [软件开发中的若干驱动](./shared/软件开发中的若干驱动.md) <br>
@@ -30,6 +30,7 @@
 - [工作半年有感](./shared/half-year-of-job.md) <br>
 
 ### 找工作的时候可以看看
+- 你所做的一切，都是在：[为简历打工](./job/为简历打工.md) <br>
 - [面试必问](./job/面试必问.md) <br>
 - [常见笔试题](./job/常见笔试题.md) <br>
 - [关于缓存](./job/关于缓存.md) <br>
@@ -43,7 +44,7 @@
 - [html](./job/html.md) <br>
 - [js](./job/js.md) <br>
 - [network](./job/network.md) <br>
-- [vim从一到二](./job/vim.md) <br>
+- 学习Vim 必经之路：[vim从一到二](./job/vim.md) <br>
 - [others](./job/others.md) <br>
 - [webpack](./job/webpack.md) <br>
 - [从零到一卡夫卡](./job/从零到一卡夫卡.md) <br>

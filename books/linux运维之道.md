@@ -30,3 +30,7 @@ echo hello the world | awk '{print $1, $2, $3}'
 // 删除光标前后单词
 <C-w> <A-d>
 ```
+- tail
+```sh
+tail -f [-n|-c] 100 index.html
+```

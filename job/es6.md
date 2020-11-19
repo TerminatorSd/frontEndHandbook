@@ -163,6 +163,9 @@ function *asyncJob() {
 - 将Generator 函数和Promise 封装在一起组成异步Generator 函数，用来处理异步流程
 - 使用Thunk 函数进行异步流程管理
 
+##### More
+- ES6 中最完美的世界就是生成器（看似同步的异步代码）和Promise（可信任、可组合）的结合。【尚未掌握】
+
 > ### async & await
 ##### (1) 是什么？
 - 是generator 函数的语法糖

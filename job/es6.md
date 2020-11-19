@@ -116,8 +116,11 @@ proxy.foo // TypeError: Revoked
 
 > ### Iterator
 ##### (1) 是什么？
-- 是一种遍历器接口，部署了Iterator 接口的数据结构可以使用ES6 的for...of 进行遍历
+- 是一种遍历器接口，部署了Iterator 接口的数据结构可以使用ES6 的for...of 进行遍历
     - for...in 遍历键名，for...of 遍历键值
+- 迭代器与可迭代
+    - 迭代器是一个用于从生产者一步一步得到一系列值的定义良好的接口，通常包含next方法，和[Symbol.iterator]属性
+    - 一个对象如果包含迭代器，那么我们称之为可迭代的
 ##### (2) 在哪里
 - ES6 规定，默认的Iterator 接口部署在数据结构的Symbol.iterator 属性，或者说，一个数据结构只要具有Symbol.iterator 属性就认为是可遍历的
 - ES6 中原生具备遍历器接口的数据结构包含：Array、Map、Set、String、TypedArray、函数的arguments 对象、NodeList 对象、字符串

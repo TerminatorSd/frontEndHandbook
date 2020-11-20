@@ -188,6 +188,13 @@ function *asyncJob() {
 ##### More
 - ES6 中最完美的世界就是生成器（看似同步的异步代码）和Promise（可信任、可组合）的结合。【尚未掌握】
 
+> ### Thunk
+##### Thunk是什么？如何读懂Thunk？
+
+##### 用若干个return 来封装内部实现的目的是什么？
+
+##### Thunk 和柯里化的区别是什么？
+
 > ### async & await
 ##### (1) 是什么？
 - 是generator 函数的语法糖

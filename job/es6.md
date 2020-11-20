@@ -116,18 +116,60 @@ proxy.foo // TypeError: Revoked
 
 > ### Iterator
 ##### (1) 是什么？
+- Iterator 这个词应该翻译为遍历器还是迭代器？
+    - 我认为翻译成遍历器更佳，因为遍历器这个名字更形象，就是走完所有的步骤，走到尽头；而迭代这个概念，我们对它的认知就是一个不断滚滚向前的车轮，不知道何时能走到尽头，也不知道有没有尽头
 - 是一种遍历器接口，部署了Iterator 接口的数据结构可以使用ES6 的for...of 进行遍历
     - for...in 遍历键名，for...of 遍历键值
-- 迭代器与可迭代
-    - 迭代器是一个用于从生产者一步一步得到一系列值的定义良好的接口，通常是指next方法
-    - 一个对象如果包含迭代器，那么我们称之为可迭代的
-    - 可迭代对象上通常有[Symbol.iterator]方法，调用该方法可以获得该可迭代对象的迭代器
-    - 拿到迭代器之后，一次一次地调用next就可以获得一系列值
+- 遍历器与可遍历
+    - 遍历器是一个用于从生产者一步一步得到一系列值的定义良好的接口，通常是指next方法
+    - 一个对象如果包含遍历器，那么我们称之为可遍历的
+    - 可遍历对象上通常有[Symbol.iterator]方法，调用该方法可以获得该可遍历对象的遍历器
+    - 拿到遍历器之后，一次一次地调用next就可以获得一系列值
 ##### (2) 在哪里
 - ES6 规定，默认的Iterator 接口部署在数据结构的Symbol.iterator 属性，或者说，一个数据结构只要具有Symbol.iterator 属性就认为是可遍历的
 - ES6 中原生具备遍历器接口的数据结构包含：Array、Map、Set、String、TypedArray、函数的arguments 对象、NodeList 对象、字符串
 ##### (3) 对象为什么不具备遍历器接口？
 - 因为对象属性的遍历顺序是不确定的，需要开发者手动指定。遍历器本质上是一种线性结构，对于非线性的数据结构，部署遍历器结构就等于部署一种线性转换
+##### 如何为对象部署遍历器接口
+- 通过`ownKeys + yield` 的函数来部署遍历器接口
+```
+function* objectEntries(obj) {
+  let propKeys = Reflect.ownKeys(obj);
+
+  for (let propKey of propKeys) {
+    yield [propKey, obj[propKey]];
+  }
+}
+
+let jane = { first: 'Jane', last: 'Doe' };
+
+for (let [key, value] of objectEntries(jane)) {
+  console.log(`${key}: ${value}`);
+}
+// first: Jane
+// last: Doe
+```
+- 通过为`Symbol.iterator` 赋值来部署遍历器接口
+```
+function* objectEntries() {
+  let propKeys = Object.keys(this);
+
+  for (let propKey of propKeys) {
+    yield [propKey, this[propKey]];
+  }
+}
+
+let jane = { first: 'Jane', last: 'Doe' };
+
+jane[Symbol.iterator] = objectEntries;
+
+for (let [key, value] of jane) {
+  console.log(`${key}: ${value}`);
+}
+// first: Jane
+// last: Doe
+```
+
 ##### (4) 默认调用Iterator 接口的场合
 - 解构赋值
 - 扩展运算符
@@ -137,56 +179,10 @@ proxy.foo // TypeError: Revoked
     - Array.from()
     - Promise.all()、Promise.race()
     - Map()、Set()、WeakMap()、WeakSet()
-##### 有默认迭代器的结构
+##### 有默认遍历器的结构
 - array
-##### 一个最简单的迭代器
+##### 一个最简单的遍历器
 - TODO
-
-> ### Generator
-##### (1) 是什么？
-- 是ES6 中异步编程的一种解决方案，函数名前带星号，函数中可以使用yield 进行暂停操作
-- Generator 函数中遇到yield 关键字的时候会暂停执行后面的内容，并将紧跟在yield 后面的返回值作为对象的value 值
-- 遇到yield表达式，就暂停执行后面的操作，并将紧跟在yield后面的那个表达式的值，作为返回的对象的value属性值
-- yield 为JavaScript 提供了手动的惰性求值，关于这一点，有个很好的例子
-- 可以说 Generator 生成了一系列的值，这也就是它的名称的来历（生成器）
-##### (2) 怎么用？
-- 调用该函数会返回一个内部指针（遍历器），执行它不会返回结果，而是返回指针对象，可以通过next 方法移动内部指针
-- 利用该函数可以在任意对象上部署Iterator 接口，之后我们可以通过for of 进行访问
-- yield表达式如果用在另一个表达式之中，必须放在圆括号里面
-- 读懂它
-```js
-function* foo(x) {
-  var y = 2 * (yield (x + 1));
-  var z = yield (y / 3);
-  return (x + y + z);
-}
-
-var a = foo(5);
-a.next() // Object{value:6, done:false}
-a.next() // Object{value:NaN, done:false}
-a.next() // Object{value:NaN, done:true}
-
-var b = foo(5);
-b.next() // { value:6, done:false }
-b.next(12) // { value:8, done:false }
-b.next(13) // { value:42, done:true }
-```
-##### (3) Generator 与协程
-- Generator 函数是协程在ES6 中的实现，最大特点就是可以交出函数的执行权（即暂停执行）
-```js
-function *asyncJob() {
-    // ...
-    // 此时函数的执行权交到readFile 函数手中
-    var f = yield readFile(fileA);
-    // ...
-}
-```
-##### (4) Generator 异步应用
-- 将Generator 函数和Promise 封装在一起组成异步Generator 函数，用来处理异步流程
-- 使用Thunk 函数进行异步流程管理
-
-##### More
-- ES6 中最完美的世界就是生成器（看似同步的异步代码）和Promise（可信任、可组合）的结合。【尚未掌握】
 
 > ### Thunk
 ##### Thunk是什么？如何读懂Thunk？

@@ -37,10 +37,11 @@
 - [关于http](./job/关于http.md) <br>
 - [浏览器相关](./job/浏览器相关.md) <br>
 - [前端框架](./job/前端框架.md) <br>
-- [三言两语](./job/三言两语.md) <br>
+- 我时常会想，三言两语能否把一个稍微复杂一点的概念讲清楚？[三言两语](./job/三言两语.md) <br>
 - [响应式](./job/响应式.md) <br>
 - [css](./job/css.md) <br>
-- [es6](./job/es6.md) <br>
+- es6 中必须要知道的知识点：[es6](./job/es6.md) <br>
+- 值的为generator 专门记录一篇：[遍历器 AKA generator](./job/generator.md) <br>
 - [html](./job/html.md) <br>
 - [js](./job/js.md) <br>
 - [network](./job/network.md) <br>

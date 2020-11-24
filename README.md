@@ -12,6 +12,7 @@
 - [《JavaScript语言精粹》](./books/JavaScript语言精粹.md) <br>
 - [《园丁与木匠》](./books/园丁与木匠.md) <br>
 - [《修改软件的艺术》](./books/修改软件的艺术.md) <br>
+- [《你不知道的JavaScript-下》](./books/你不知道的JavaScript-下.md) <br>
 
 ### 写点东西
 - [SRE必知必会](./shared/SRE必知必会.md) <br>

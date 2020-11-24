@@ -46,3 +46,4 @@ function *asyncJob() {
 - 区分遍历器throw 和throw，throw 只能被函数体外的catch 捕获，遍历器如果没有声明catch 可以被函数体外catch 捕获，如果内外都没有声明catch，则运行报错
   - throw 方法抛出的错误要被内部捕获，前提是必须至少执行过一次next 方法
   - throw方法被捕获以后，会附带执行下一条yield表达式。也就是说，会附带执行一次next方法
+- next()、throw()、return()这三个方法本质上是同一件事，可以放在一起理解。它们的作用都是让 Generator 函数恢复执行，并且使用不同的语句替换yield表达式

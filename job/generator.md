@@ -44,4 +44,5 @@ function *asyncJob() {
 ##### More
 - ES6 中最完美的世界就是生成器（看似同步的异步代码）和Promise（可信任、可组合）的结合。【尚未掌握】
 - 区分遍历器throw 和throw，throw 只能被函数体外的catch 捕获，遍历器如果没有声明catch 可以被函数体外catch 捕获，如果内外都没有声明catch，则运行报错
-  - throw 方法抛出的错误要被内部捕获，前提是必须至少执行过一次next 方法。
+  - throw 方法抛出的错误要被内部捕获，前提是必须至少执行过一次next 方法
+  - throw方法被捕获以后，会附带执行下一条yield表达式。也就是说，会附带执行一次next方法

@@ -47,3 +47,19 @@ function *asyncJob() {
   - throw 方法抛出的错误要被内部捕获，前提是必须至少执行过一次next 方法
   - throw方法被捕获以后，会附带执行下一条yield表达式。也就是说，会附带执行一次next方法
 - next()、throw()、return()这三个方法本质上是同一件事，可以放在一起理解。它们的作用都是让 Generator 函数恢复执行，并且使用不同的语句替换yield表达式
+- ES6 提供了yield*表达式，作为解决办法，用来在一个 Generator 函数里面执行另一个 Generator 函数
+```js
+function* bar() {
+  yield 'x';
+  yield* foo();
+  yield 'y';
+}
+
+// 等同于
+function* bar() {
+  yield 'x';
+  yield 'a';
+  yield 'b';
+  yield 'y';
+}
+```

@@ -81,3 +81,13 @@ function* concat(iter1, iter2) {
   }
 }
 ```
+- 任何数据结构只要有 Iterator 接口，就可以被yield*遍历
+```js
+let read = (function* () {
+  yield 'hello';
+  yield* 'hello';
+})();
+
+read.next().value // "hello"
+read.next().value // "h"
+```

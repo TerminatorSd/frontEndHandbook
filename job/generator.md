@@ -110,3 +110,14 @@ for(let x of iterTree(tree)) {
 }
 [...iterTree(tree)]
 ```
+- 使用generator 来实现状态机
+```js
+var clock = function* () {
+  while (true) {
+    console.log('Tick!');
+    yield;
+    console.log('Tock!');
+    yield;
+  }
+};
+```

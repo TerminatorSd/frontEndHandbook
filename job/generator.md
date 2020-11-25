@@ -91,3 +91,22 @@ let read = (function* () {
 read.next().value // "hello"
 read.next().value // "h"
 ```
+- 利用generator 平铺数组
+```js
+function* iterTree(tree) {
+  if (Array.isArray(tree)) {
+    for(let i=0; i < tree.length; i++) {
+      yield* iterTree(tree[i]);
+    }
+  } else {
+    yield tree;
+  }
+}
+
+const tree = [ 'a', ['b', 'c'], ['d', 'e'] ];
+
+for(let x of iterTree(tree)) {
+  console.log(x);
+}
+[...iterTree(tree)]
+```

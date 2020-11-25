@@ -28,7 +28,8 @@ b.next(12) // { value:8, done:false }
 b.next(13) // { value:42, done:true }
 ```
 ##### (3) Generator 与协程
-- Generator 函数是协程在ES6 中的实现，最大特点就是可以交出函数的执行权（即暂停执行）
+- Generator 函数是协程(coroutine，指协作的线程或协作的函数)在ES6 中的实现，最大特点就是可以交出函数的执行权（即暂停执行）
+  - 从实现上看，在内存中，子例程只使用一个栈（stack），而协程是同时存在多个栈，但只有一个栈是在运行状态，也就是说，协程是以多占用内存为代价，实现多任务的并行
 ```js
 function *asyncJob() {
     // ...
@@ -120,4 +121,21 @@ var clock = function* () {
     yield;
   }
 };
+```
+- Generator 函数的暂停执行的效果，意味着可以把异步操作写在yield表达式里面，等到调用next方法时再往后执行。这实际上等同于不需要写回调函数了，因为异步操作的后续操作可以放在yield表达式下面
+```js
+function* main() {
+  var result = yield request("http://some.url");
+  var resp = JSON.parse(result);
+    console.log(resp.value);
+}
+
+function request(url) {
+  makeAjaxCall(url, function(response){
+    it.next(response);
+  });
+}
+
+var it = main();
+it.next();
 ```

@@ -8,6 +8,24 @@
 ##### (2) 怎么用？
 - 调用该函数会返回一个内部指针（遍历器），执行它不会返回结果，而是返回指针对象，可以通过next 方法移动内部指针
 - 利用该函数可以在任意对象上部署Iterator 接口，之后我们可以通过for of 进行访问
+```js
+function* iterEntries(obj) {
+  let keys = Object.keys(obj);
+  for (let i=0; i < keys.length; i++) {
+    let key = keys[i];
+    yield [key, obj[key]];
+  }
+}
+
+let myObj = { foo: 3, bar: 7 };
+
+for (let [key, value] of iterEntries(myObj)) {
+  console.log(key, value);
+}
+
+// foo 3
+// bar 7
+```
 - yield表达式如果用在另一个表达式之中，必须放在圆括号里面
 - 读懂它
 ```js

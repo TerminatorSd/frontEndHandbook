@@ -43,6 +43,7 @@
 - [css](./job/css.md) <br>
 - es6 中必须要知道的知识点：[es6](./job/es6.md) <br>
 - 值的为generator 专门记录一篇：[遍历器 AKA generator](./job/generator.md) <br>
+- Promise 到底解决了什么问题：[承诺 AKA Promise](./job/Promise.md) <br>
 - [html](./job/html.md) <br>
 - [js](./job/js.md) <br>
 - [network](./job/network.md) <br>

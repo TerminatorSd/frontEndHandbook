@@ -21,6 +21,7 @@
 - https://indepth.dev/posts/1112/a-look-at-major-features-in-the-angular-ivy-version-9-release
 - Ivy 与View Engine
     - Angular libraries cannot be AOT-compiled using View Engine
+    - AOT 相比于JIT 能更早发现问题，比如说如果你的html 中引用的ts 变量或者方法在ts 文件中没有定义，AOT 在本地编译就可以发现，而JIT + AOT 则要延迟问题的发现
 
 ### Angular 中为什么要有NgModule？
 - 问题：Component 已经可以是一个完整的个体

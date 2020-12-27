@@ -38,6 +38,7 @@
 - [关于http](./job/关于http.md) <br>
 - [浏览器相关](./job/浏览器相关.md) <br>
 - [前端框架](./job/前端框架.md) <br>
+- [about angular](./job/about-angular.md) <br>
 - 我时常会想，三言两语能否把一个稍微复杂一点的概念讲清楚？[三言两语](./job/三言两语.md) <br>
 - [响应式](./job/响应式.md) <br>
 - [css](./job/css.md) <br>

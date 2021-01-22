@@ -54,7 +54,9 @@ const tempStr2 = `${theName} haha`;
 - `/{x}`查找下一处，n 下移，N 上移
 - `?{x}`查找上移除，n 上移，N 下移
 - 全局替换 `:%s/{x}/{y}/g`
+- 替换当前行 `:s/vivian/sky/g`
 - 跳跃替换一个单词，从content 替换为copy `/content` `cwcopy` `n.`
+- 替换更多：http://xstarcd.github.io/wiki/vim/vim_replace_encodeing.html
 
 ### 复制、剪切、删除
 - 剪切行 `dd`

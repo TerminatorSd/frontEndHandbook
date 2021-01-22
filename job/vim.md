@@ -140,6 +140,11 @@ var foo = "method("+arg+","+arg2+")";
 - 查看所有插件 `:scriptnames`
 - 卸载插件 `vim ~/.vimrc` -> 注释要删除插件 -> `:source ~/.vimrc` -> 重新进入vim
 
+### 宏
+- 录制 `qaq`
+- 查看宏 `:reg a`
+- 编辑
+
 todo: 笔记到出厂设置
 
 

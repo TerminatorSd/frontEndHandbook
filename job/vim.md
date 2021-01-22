@@ -144,6 +144,14 @@ var foo = "method("+arg+","+arg2+")";
 - 录制 `qaq`
 - 查看宏 `:reg a`
 - 编辑
+```
+G 
+:put a
+// edit
+0
+"ay$
+dd
+```
 
 todo: 笔记到出厂设置
 

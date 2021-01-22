@@ -54,7 +54,9 @@ const tempStr2 = `${theName} haha`;
 - `/{x}`查找下一处，n 下移，N 上移
 - `?{x}`查找上移除，n 上移，N 下移
 - 全局替换 `:%s/{x}/{y}/g`
+- 替换当前行 `:s/vivian/sky/g`
 - 跳跃替换一个单词，从content 替换为copy `/content` `cwcopy` `n.`
+- 替换更多：http://xstarcd.github.io/wiki/vim/vim_replace_encodeing.html
 
 ### 复制、剪切、删除
 - 剪切行 `dd`
@@ -137,6 +139,19 @@ var foo = "method("+arg+","+arg2+")";
 ### 插件管理
 - 查看所有插件 `:scriptnames`
 - 卸载插件 `vim ~/.vimrc` -> 注释要删除插件 -> `:source ~/.vimrc` -> 重新进入vim
+
+### 宏
+- 录制 `qaq`
+- 查看宏 `:reg a`
+- 编辑
+```
+G 
+:put a
+// edit
+0
+"ay$
+dd
+```
 
 todo: 笔记到出厂设置
 
